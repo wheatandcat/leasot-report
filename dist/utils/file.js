@@ -21,6 +21,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
 
+var filterExts = [".js", ".jsx", ".css", ".sass", ".java", ".go", ".php", ".rb"];
+
 var todos = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(file) {
     var contents, filetype, list;
@@ -101,19 +103,27 @@ var files = exports.files = function () {
                         return files(fp, data);
 
                       case 6:
-                        _context2.next = 13;
+                        _context2.next = 15;
                         break;
 
                       case 8:
-                        _context2.next = 10;
-                        return todos(fp);
+                        if (!(filterExts.indexOf(_path2.default.extname(fp)) === -1)) {
+                          _context2.next = 10;
+                          break;
+                        }
+
+                        return _context2.abrupt("return");
 
                       case 10:
+                        _context2.next = 12;
+                        return todos(fp);
+
+                      case 12:
                         tmp = _context2.sent;
-                        _context2.next = 13;
+                        _context2.next = 15;
                         return data.push.apply(data, _toConsumableArray(JSON.parse(tmp)));
 
-                      case 13:
+                      case 15:
                       case "end":
                         return _context2.stop();
                     }

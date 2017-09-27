@@ -1,6 +1,6 @@
 {
   "name": "leasot-report",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "description": "leasot output report",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,9 @@
   "bin": {
     "leasot-report": "dist/index.js"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wheatandcat/leasot-report.git"
