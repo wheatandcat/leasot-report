@@ -2,6 +2,17 @@ import fs from "fs"
 import path from "path"
 import { parse, reporter } from "leasot"
 
+const filterExts = [
+  ".js",
+  ".jsx",
+  ".css",
+  ".sass",
+  ".java",
+  ".go",
+  ".php",
+  ".rb"
+]
+
 const todos = async file => {
   const contents = await fs.readFileSync(file, "utf8")
   const filetype = await path.extname(file)
@@ -26,6 +37,9 @@ export const files = async (p, data = []) => {
       if (fs.statSync(fp).isDirectory()) {
         await files(fp, data) // ディレクトリなら再帰
       } else {
+        if (filterExts.indexOf(path.extname(fp)) === -1) {
+          return
+        }
         const tmp = await todos(fp)
         await data.push(...JSON.parse(tmp))
       }
