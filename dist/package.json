@@ -1,14 +1,13 @@
 {
   "name": "leasot-report",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "leasot output report",
   "main": "index.js",
   "scripts": {
     "build": "run-s build:*",
     "build:init": "rm -rf dist && mkdir dist",
     "build:js": "babel src --out-dir dist",
-    "build:install":
-      "cp package.json dist/ && cd dist && yarn install --production",
+    "build:install": "cp package.json dist/ && cd dist && yarn install --production",
     "build:chmod": "chmod -R 777 dist/*.js",
     "start": "babel-node src/index.js",
     "storybook": "start-storybook -p 9009",
@@ -51,6 +50,7 @@
     "npm-run-all": "^4.1.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "leasot": "^4.10.1",
     "mkdirp": "^0.5.1",
     "react": "^16.0.0",
