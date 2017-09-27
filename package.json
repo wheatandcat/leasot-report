@@ -17,7 +17,6 @@
   "bin": {
     "leasot-report": "dist/index.js"
   },
-  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wheatandcat/leasot-report.git"
