@@ -1,6 +1,6 @@
 {
   "name": "leasot-report",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "leasot output report",
   "main": "index.js",
   "scripts": {
