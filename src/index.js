@@ -8,13 +8,18 @@ import React from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 import { files } from "./utils/file"
 import SummaryPage from "./components/Summary"
+import Header from "./components/Header"
 
 const outputDir = "leasot-reports"
 
 const summaryReport = async items => {
   const reportFileContent =
     (await "<!DOCTYPE html>\n") +
-    renderToStaticMarkup(<SummaryPage items={items} />)
+    renderToStaticMarkup(
+      <Header>
+        <SummaryPage items={items} />
+      </Header>
+    )
 
   await writeFileSync(`${outputDir}/index.html`, reportFileContent)
 }

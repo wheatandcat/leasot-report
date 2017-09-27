@@ -1,3 +1,4 @@
 // @flow
 export { default } from "./Page"
-export { Row } from "./Row"
+export { default as Row } from "./Row"
+export { default as Header } from "./Header"
