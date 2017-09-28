@@ -5,10 +5,6 @@ import { provider } from "./decorators"
 
 addDecorator(provider)
 
-setOptions({
-  downPanelInRight: true
-})
-
 const req = require.context("../src", true, /stories.js$/)
 
 function loadStories() {
