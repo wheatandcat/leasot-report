@@ -26,7 +26,9 @@ const Cel = ({ children }: { children: Node }) => {
 
 export default ({ file, kind, line, text, ref }: Props) => (
   <tr>
-    <Cel>{file}</Cel>
+    <Cel>
+      <a href={`./${file}.html#L${line}`}>{file}</a>
+    </Cel>
     <Cel>{line}</Cel>
     <Cel>{kind}</Cel>
     <Cel>{text}</Cel>

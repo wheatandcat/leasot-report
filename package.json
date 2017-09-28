@@ -12,7 +12,8 @@
     "build:chmod": "chmod -R 777 dist/*.js",
     "start": "babel-node src/index.js",
     "storybook": "start-storybook -p 9009",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest"
   },
   "bin": {
     "leasot-report": "dist/index.js"

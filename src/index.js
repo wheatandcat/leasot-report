@@ -6,7 +6,7 @@ import rimraf from "rimraf"
 import mkdirp from "mkdirp"
 import React from "react"
 import { renderToStaticMarkup } from "react-dom/server"
-import { files } from "./utils/file"
+import { mapping, files, fixmeList } from "./utils/file"
 import SummaryPage from "./components/Summary"
 import Header from "./components/Header"
 
@@ -28,9 +28,13 @@ const start = async () => {
   await rimraf.sync(outputDir)
   await mkdirp.sync(outputDir)
 
-  const list = await files(process.argv[2])
+  const map = await mapping(process.argv[2])
+  const list = await files(map)
+  await list.map(async file => {
+    await fixmeList(file, map)
+  })
 
-  await summaryReport(list)
+  await summaryReport(map)
 }
 
 start()
