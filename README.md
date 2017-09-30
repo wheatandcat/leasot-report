@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/leasot-report.svg)](https://badge.fury.io/js/leasot-report)
 
-leasot-report is a command line tool that uses leasot to output TODOs and FIXMEs in your code
+leasot-report is a command line tool that uses [leasot](https://github.com/pgilad/leasot) to output TODOs and FIXMEs in your code
 
 ![image](./doc/summary.png)
 
@@ -21,9 +21,11 @@ npm i --save-dev leasot-report
 
 Run the output reports
 ```sh
-leasot-report src
+$ leasot-report src
 
-ls -al leasot-reports/
+$ ls leasot-reports/
+ example		index.html
+
 ```
 
 
