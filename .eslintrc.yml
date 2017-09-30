@@ -46,6 +46,7 @@ rules:
         - "**/*.test.js"
         - "**/stories.js"
         - ".storybook/**"
+        - "jest-setup.js"
       optionalDependencies: false
       peerDependencies: false
   flowtype/no-weak-types:

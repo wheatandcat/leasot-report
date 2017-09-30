@@ -13,7 +13,7 @@
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "test": "jest"
+    "test": "jest --env=jsdom"
   },
   "bin": {
     "leasot-report": "dist/index.js"
@@ -31,6 +31,11 @@
     "gitUsername": "wheatandcat",
     "gitEmail": "wheatandcat@gamail.com",
     "commitMessage": ".stamp Storybook to GitHub Pages"
+  },
+  "jest": {
+    "collectCoverageFrom": ["src/**/*.js", "!src/**/{index,stories}.js"],
+    "setupFiles": ["./jest-setup.js"],
+    "coveragePathIgnorePatterns": ["/node_modules/", "/jest-setup.js"]
   },
   "homepage": "https://github.com/wheatandcat/leasot-report#readme",
   "devDependencies": {
@@ -55,6 +60,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
     "eslint": "^4.7.2",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-standard": "^10.2.1",
@@ -68,7 +74,8 @@
     "eslint-plugin-standard": "^3.0.1",
     "flow-bin": "^0.55.0",
     "jest": "^21.1.0",
-    "npm-run-all": "^4.1.1"
+    "npm-run-all": "^4.1.1",
+    "react-test-renderer": "^16.0.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",

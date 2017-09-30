@@ -21,11 +21,11 @@ const todos = async (file) => {
   })
 }
 
-export const mapping = async (p, data = []) => {
-  const list = await readdirSync(p)
+export const mapping = async (dir, data = []) => {
+  const list = await readdirSync(dir)
   await Promise.all(
     list.map(async (f) => {
-      const fp = await join(p, f)
+      const fp = await join(dir, f)
       if (statSync(fp).isDirectory()) {
         await mapping(fp, data)
       } else {

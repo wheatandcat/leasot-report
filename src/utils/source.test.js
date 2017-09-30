@@ -91,5 +91,14 @@ describe("files", () => {
         { code: "// foo", line: 4, todo: false }
       ])
     })
+
+    it("no match", async () => {
+      await write("index.js", [
+        { code: "// @TODO: foo", line: 1, todo: true },
+        { code: "// foo", line: 2, todo: false },
+        { code: "// @TODO: bar", line: 3, todo: true },
+        { code: "// foo", line: 4, todo: false }
+      ])
+    })
   })
 })
