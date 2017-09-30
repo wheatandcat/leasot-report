@@ -12,6 +12,7 @@
     "start": "babel-node src/index.js",
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
     "test": "jest"
   },
   "bin": {
@@ -26,13 +27,20 @@
   "bugs": {
     "url": "https://github.com/wheatandcat/leasot-report/issues"
   },
+  "storybook-deployer": {
+    "gitUsername": "wheatandcat",
+    "gitEmail": "wheatandcat@gamail.com",
+    "commitMessage": ".stamp Storybook to GitHub Pages"
+  },
   "homepage": "https://github.com/wheatandcat/leasot-report#readme",
   "devDependencies": {
+    "@personare/react-storybook-decorator-github-corner": "^0.1.5",
     "@storybook/addon-actions": "^3.2.11",
     "@storybook/addon-knobs": "^3.2.10",
     "@storybook/addon-options": "^3.2.10",
     "@storybook/cli": "^3.2.10",
     "@storybook/react": "^3.2.11",
+    "@storybook/storybook-deployer": "^2.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",

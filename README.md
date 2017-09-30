@@ -29,6 +29,9 @@ $ ls leasot-reports/
 ```
 
 
-
 ### Supported extensions
 ".js", ".jsx", ".css", ".sass", ".java", ".go", ".php", ".rb"
+
+### Demos
+
+[storybook](https://wheatandcat.github.io/leasot-report/)
