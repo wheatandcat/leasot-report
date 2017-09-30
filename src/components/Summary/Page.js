@@ -2,9 +2,10 @@
 import React from "react"
 import { Row, Header } from "./"
 import type { Props as ItemProps } from "./Row"
+import Footer from "../Footer"
 
 type Props = {
-  items: Array<ItemProps>
+  items: Array<ItemProps>,
 }
 
 export default ({ items }: Props) => (
@@ -13,20 +14,14 @@ export default ({ items }: Props) => (
 
     <h4>Files</h4>
     <table
-      className="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp"
+      className='mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp'
       style={{ textAlign: "left", width: "100%" }}
     >
       <Header />
       {items.map(({ file, kind, line, text, ref }: ItemProps) => (
-        <Row
-          key={file + "_" + line}
-          file={file}
-          kind={kind}
-          line={line}
-          text={text}
-          ref={ref}
-        />
+        <Row key={`${file}_${line}`} file={file} kind={kind} line={line} text={text} ref={ref} />
       ))}
     </table>
+    <Footer />
   </div>
 )

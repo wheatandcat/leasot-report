@@ -1,10 +1,10 @@
 // @flow
-import React, { type Node } from "react"
+import React from "react"
 
 export type Props = {
   line: number,
   code: string,
-  todo: boolean
+  todo: boolean,
 }
 
 const style = {
@@ -23,7 +23,7 @@ const todoStyle = {
 const lineStyle = {
   textAlign: "left",
   width: "20px",
-  fontSize: "15px",
+  fontSize: "10px",
   margin: "0px",
   padding: "0px",
   border: "none",
@@ -35,7 +35,7 @@ const lineStyle = {
 const todoLineStyle = {
   textAlign: "left",
   width: "20px",
-  fontSize: "15px",
+  fontSize: "10px",
   margin: "0px",
   padding: "0px",
   border: "none",
@@ -50,7 +50,7 @@ export default ({ line, code, todo }: Props) => (
     <td
       style={{
         textAlign: "left",
-        fontSize: "15px",
+        fontSize: "10px",
         margin: "0px",
         border: "none",
         paddingLeft: "5px"

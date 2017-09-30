@@ -1,20 +1,18 @@
 // @flow
 import React, { type Node } from "react"
 
-const Cel = ({ children }: { children: Node }) => {
-  return (
-    <td
-      style={{
-        border: "1px #ccc solid",
-        textAlign: "left",
-        backgroundColor: "#F2F2F2",
-        fontWeight: "bold"
-      }}
-    >
-      {children}
-    </td>
-  )
-}
+const Cel = ({ children }: { children: Node }) => (
+  <td
+    style={{
+      border: "1px #ccc solid",
+      textAlign: "left",
+      backgroundColor: "#F2F2F2",
+      fontWeight: "bold"
+    }}
+  >
+    {children}
+  </td>
+)
 
 export default () => (
   <thead>

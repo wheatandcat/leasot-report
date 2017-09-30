@@ -1,10 +1,13 @@
 // @flow
-import { fixmeList, getCodes, writeSource } from "./file"
+import fixmeList, { __RewireAPI__ } from "./source"
+
+const codeRecords = __RewireAPI__.__get__("codeRecords")
+const write = __RewireAPI__.__get__("write")
 
 describe("files", () => {
   describe("fixmeList", () => {
     it("result match", async () => {
-      const result = await fixmeList("example/testDir/index_001.js", [
+      await fixmeList("example/testDir/index_001.js", [
         {
           file: "example/index.js",
           kind: "TODO",
@@ -48,13 +51,12 @@ describe("files", () => {
           ref: ""
         }
       ])
-      expect(1).toEqual(1)
     })
   })
 
-  describe("getCodes", () => {
+  describe("codeRecords", () => {
     it("result match", async () => {
-      const result = await getCodes(
+      const result = await codeRecords(
         ["// @TODO: foo", "// @TODO: bar"],
         [
           {
@@ -74,15 +76,15 @@ describe("files", () => {
         ]
       )
       expect(result).toEqual([
-        { code: "// @TODO: foo", line: 1, todo: true },
-        { code: "// @TODO: bar", line: 2, todo: true }
+        { code: "// @TODO: foo", line: 1, todo: false },
+        { code: "// @TODO: bar", line: 2, todo: false }
       ])
     })
   })
 
-  describe("writeSource", () => {
+  describe("write", () => {
     it("write source", async () => {
-      await writeSource("example/testDir/index_001.js", [
+      await write("example/testDir/index_001.js", [
         { code: "// @TODO: foo", line: 1, todo: true },
         { code: "// foo", line: 2, todo: false },
         { code: "// @TODO: bar", line: 3, todo: true },

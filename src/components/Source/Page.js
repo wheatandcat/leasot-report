@@ -1,22 +1,21 @@
 // @flow
-import React, { type Node } from "react"
+import React from "react"
 import Row, { type Props as RowProps } from "./Row"
+import Footer from "../Footer"
 
 export type Props = {
   fileName: number,
-  codes: Array<RowProps>
+  codes: Array<RowProps>,
+  back: string,
 }
 
-const style = {
-  margin: "0px",
-  padding: "0px",
-  border: "none"
-}
-
-export default ({ fileName, codes }: Props) => (
+export default ({ fileName, codes, back }: Props) => (
   <div>
-    <h3>Leasot Report</h3>
+    <h3>
+      <a href={`${back}index.html`}>Leasot Report</a>
+    </h3>
     <h4>{fileName}</h4>
+    <hr />
     <div style={{ width: "60rem", border: "1px solid #DEDEDF" }}>
       <table
         style={{
@@ -35,5 +34,6 @@ export default ({ fileName, codes }: Props) => (
         </tbody>
       </table>
     </div>
+    <Footer />
   </div>
 )

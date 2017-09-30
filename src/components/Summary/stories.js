@@ -8,7 +8,7 @@ storiesOf("Summary", module)
   .addDecorator(center)
   .add("Header", () => (
     <table
-      className="mdl-data-table mdl-js-data-table mdl-shadow--2dp"
+      className='mdl-data-table mdl-js-data-table mdl-shadow--2dp'
       style={{ textAlign: "left", width: "90%" }}
     >
       <Header />
@@ -16,12 +16,12 @@ storiesOf("Summary", module)
   ))
   .add("Row", () => (
     <table
-      className="mdl-data-table mdl-js-data-table mdl-shadow--2dp"
+      className='mdl-data-table mdl-js-data-table mdl-shadow--2dp'
       style={{ textAlign: "left", width: "90%" }}
     >
       <tbody>
-        <Row file="example/index.js" line={2} kind="TODO" text="foo bar" />
-        <Row file="example/index.js" line={4} kind="TODO" text="foo bar" />
+        <Row file='example/index.js' line={2} kind='TODO' text='foo bar' />
+        <Row file='example/index.js' line={4} kind='TODO' text='foo bar' />
       </tbody>
     </table>
   ))

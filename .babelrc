@@ -10,5 +10,6 @@
     ],
     "flow",
     "react"
-  ]
+  ],
+  "plugins": ["rewire"]
 }
