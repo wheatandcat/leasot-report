@@ -1,6 +1,7 @@
 # leasot-report
 
 [![npm version](https://badge.fury.io/js/leasot-report.svg)](https://badge.fury.io/js/leasot-report)
+[![Build Status](https://travis-ci.org/wheatandcat/leasot-report.svg?branch=master)](https://travis-ci.org/wheatandcat/leasot-report)
 [![Code Climate](https://codeclimate.com/github/wheatandcat/leasot-report/badges/gpa.svg)](https://codeclimate.com/github/wheatandcat/leasot-report)
 [![Test Coverage](https://codeclimate.com/github/wheatandcat/leasot-report/badges/coverage.svg)](https://codeclimate.com/github/wheatandcat/leasot-report/coverage)
 [![Issue Count](https://codeclimate.com/github/wheatandcat/leasot-report/badges/issue_count.svg)](https://codeclimate.com/github/wheatandcat/leasot-report)
