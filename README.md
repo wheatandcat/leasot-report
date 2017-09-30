@@ -8,7 +8,7 @@ leasot-report is a command line tool that uses leasot to output TODOs and FIXMEs
 
 ![image](./doc/source.png)
 
-## Usage
+### Usage
 
 
 ```sh
@@ -22,4 +22,11 @@ npm i --save-dev leasot-report
 Run the output reports
 ```sh
 leasot-report src
+
+ls -al leasot-reports/
 ```
+
+
+
+### Supported extensions
+".js", ".jsx", ".css", ".sass", ".java", ".go", ".php", ".rb"

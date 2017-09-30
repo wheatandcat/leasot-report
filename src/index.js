@@ -12,7 +12,10 @@ import source from "./utils/source"
 import SummaryPage from "./components/Summary"
 import Header from "./components/Header"
 
-program.version("0.7.1").parse(process.argv)
+program
+  .usage("[options] <file>")
+  .version("0.8.0")
+  .parse(process.argv)
 
 const outputDir = "leasot-reports"
 
