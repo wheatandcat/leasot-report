@@ -8,7 +8,7 @@ cache:
     - node_modules
 addons:
   code_climate:
-      repo_token: 1efd452491e0acf7af957b09664e626dd113932a4207a68ed8df7dce167ec212m
+      repo_token: efd452491e0acf7af957b09664e626dd113932a4207a68ed8df7dce167ec212
 after_success:
   - yarn eslint src
   - yarn test -- --coverage
