@@ -28,7 +28,7 @@ const summaryReport = async (items) => {
       </Header>
     )
 
-  await writeFileSync(`${outputDir}/index.html`, reportFileContent)
+  await writeFileSync(`${outputDir}/index.html`, reportFileContent, { encoding: "utf8" })
 }
 
 const start = async () => {

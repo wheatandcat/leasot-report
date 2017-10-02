@@ -1,3 +1,7 @@
 src/
 .storybook/
 example/
+doc/
+leasot-reports/
+coverage/
+jest-setup.js

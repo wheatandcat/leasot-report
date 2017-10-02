@@ -58,5 +58,5 @@ const write = async (fileName, codes) => {
     await sync(`${outputDir}/${fileName.slice(0, line)}`)
   }
 
-  await writeFileSync(`${outputDir}/${fileName}.html`, reportFileContent)
+  await writeFileSync(`${outputDir}/${fileName}.html`, reportFileContent, { encoding: "utf8" })
 }
