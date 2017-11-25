@@ -13,7 +13,7 @@ leasot-report is a command line tool that uses [leasot](https://github.com/pgila
 
 ![image](./doc/source.png)
 
-### Usage
+## Usage
 
 
 ```sh
@@ -33,10 +33,13 @@ $ ls leasot-reports/
 
 ```
 
-
-### Supported extensions
+## Supported extensions
 ".js", ".jsx", ".css", ".sass", ".java", ".go", ".php", ".rb"
 
-### Demos
+## Demos
 
-[storybook](https://wheatandcat.github.io/leasot-report/)
+### example
+https://wheatandcat.github.io/examples-pages/leasot-reports/index.html
+
+### storybook
+https://wheatandcat.github.io/leasot-report/
