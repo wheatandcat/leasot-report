@@ -4,6 +4,55 @@ import { storiesOf } from "@storybook/react"
 import { center } from "../../../.storybook/decorators"
 import Page, { Row } from "./"
 
+storiesOf("Source", module).add("Page", () => (
+  <Page
+    fileName='example/index.js'
+    back='./../../'
+    codes={[
+      {
+        line: 1,
+        code: "import React from 'react'",
+        todo: false
+      },
+      {
+        line: 2,
+        code: "export default ({ file, kind, line, text, ref }: Props) => (",
+        todo: false
+      },
+      {
+        line: 3,
+        code: " <tr>",
+        todo: false
+      },
+      {
+        line: 4,
+        code: "   <td>{file}</td>",
+        todo: false
+      },
+      {
+        line: 5,
+        code: "   <td>{line}</td>",
+        todo: true
+      },
+      {
+        line: 6,
+        code: "   <td>{text}</td>",
+        todo: false
+      },
+      {
+        line: 7,
+        code: " <tr>",
+        todo: false
+      },
+      {
+        line: 8,
+        code: " )",
+        todo: false
+      }
+    ]}
+  />
+))
+
 storiesOf("Source", module)
   .addDecorator(center)
   .add("Row", () => (
@@ -20,52 +69,4 @@ storiesOf("Source", module)
         <Row line={9} code=' )' />
       </tbody>
     </table>
-  ))
-  .add("Page", () => (
-    <Page
-      fileName='example/index.js'
-      back='./../../'
-      codes={[
-        {
-          line: 1,
-          code: "import React from 'react'",
-          todo: false
-        },
-        {
-          line: 2,
-          code: "export default ({ file, kind, line, text, ref }: Props) => (",
-          todo: false
-        },
-        {
-          line: 3,
-          code: " <tr>",
-          todo: false
-        },
-        {
-          line: 4,
-          code: "   <td>{file}</td>",
-          todo: false
-        },
-        {
-          line: 5,
-          code: "   <td>{line}</td>",
-          todo: true
-        },
-        {
-          line: 6,
-          code: "   <td>{text}</td>",
-          todo: false
-        },
-        {
-          line: 7,
-          code: " <tr>",
-          todo: false
-        },
-        {
-          line: 8,
-          code: " )",
-          todo: false
-        }
-      ]}
-    />
   ))

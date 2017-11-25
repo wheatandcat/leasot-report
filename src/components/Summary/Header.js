@@ -1,26 +1,17 @@
 // @flow
-import React, { type Node } from "react"
+import React from "react"
+import styled from "styled-components"
+import { TableHead as MuiTableHead, TableRow, TableCell } from "material-ui/Table"
 
-const Cel = ({ children }: { children: Node }) => (
-  <td
-    style={{
-      border: "1px #ccc solid",
-      textAlign: "left",
-      backgroundColor: "#F2F2F2",
-      fontWeight: "bold"
-    }}
-  >
-    {children}
-  </td>
-)
+const TableHead = styled(MuiTableHead)`background-color: #eeeeee !important;`
 
 export default () => (
-  <thead>
-    <tr>
-      <Cel>Filename</Cel>
-      <Cel>Line</Cel>
-      <Cel>Kind</Cel>
-      <Cel>Message</Cel>
-    </tr>
-  </thead>
+  <TableHead>
+    <TableRow>
+      <TableCell>Filename</TableCell>
+      <TableCell>Line</TableCell>
+      <TableCell>Kind</TableCell>
+      <TableCell>Message</TableCell>
+    </TableRow>
+  </TableHead>
 )

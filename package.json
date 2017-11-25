@@ -33,7 +33,12 @@
     "commitMessage": ".stamp Storybook to GitHub Pages"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.js", "!src/**/{index,stories}.js"],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/components/Provider.js",
+      "!src/**/{index,stories}.js",
+      "!src/utils/source.js"
+    ],
     "setupFiles": ["raf/polyfill", "./jest-setup.js"],
     "coveragePathIgnorePatterns": ["/node_modules/", "/jest-setup.js"]
   },
@@ -82,10 +87,16 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "commander": "^2.11.0",
+    "jss": "^9.3.3",
+    "jss-preset-default": "^4.0.1",
     "leasot": "^4.10.1",
+    "material-ui": "next",
+    "material-ui-icons": "^1.0.0-beta.17",
     "mkdirp": "^0.5.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "rimraf": "^2.6.2"
+    "react-jss": "^8.1.0",
+    "rimraf": "^2.6.2",
+    "styled-components": "^2.2.3"
   }
 }

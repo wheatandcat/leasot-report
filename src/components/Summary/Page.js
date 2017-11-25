@@ -1,27 +1,60 @@
 // @flow
 import React from "react"
+import styled from "styled-components"
+import MuiTable, { TableBody } from "material-ui/Table"
+import AppBar from "material-ui/AppBar"
+import Toolbar from "material-ui/Toolbar"
+import Typography from "material-ui/Typography"
+import Divider from "material-ui/Divider"
 import { Row, Header } from "./"
 import type { Props as ItemProps } from "./Row"
 import Footer from "../Footer"
 
 type Props = {
-  items: Array<ItemProps>,
+  items: Array<ItemProps>
 }
 
-export default ({ items }: Props) => (
-  <div style={{ width: "90%" }}>
-    <h3>Leasot Report</h3>
+const Contents = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
-    <h4>Files</h4>
-    <table
-      className='mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp'
-      style={{ textAlign: "left", width: "100%" }}
-    >
-      <Header />
-      {items.map(({ file, kind, line, text, ref }: ItemProps) => (
-        <Row key={`${file}_${line}`} file={file} kind={kind} line={line} text={text} ref={ref} />
-      ))}
-    </table>
+const Frame = styled.div`width: 90%;`
+
+const Table = styled(MuiTable)`background-color: #fcfff0 !important;`
+
+export default ({ items }: Props) => (
+  <div>
+    <AppBar position='static' color='primary'>
+      <Toolbar>
+        <Typography type='title' color='inherit'>
+          Leasot Report
+        </Typography>
+      </Toolbar>
+    </AppBar>
+
+    <Contents>
+      <Frame>
+        <h4>Files</h4>
+        <Divider />
+        <Table>
+          <Header />
+          <TableBody>
+            {items.map(({ file, kind, line, text, ref }: ItemProps) => (
+              <Row
+                key={`${file}_${line}`}
+                file={file}
+                kind={kind}
+                line={line}
+                text={text}
+                ref={ref}
+              />
+            ))}
+          </TableBody>
+        </Table>
+      </Frame>
+    </Contents>
     <Footer />
   </div>
 )
