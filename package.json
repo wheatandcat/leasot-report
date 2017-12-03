@@ -1,6 +1,6 @@
 {
   "name": "leasot-report",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "leasot output report",
   "main": "index.js",
   "scripts": {
@@ -35,6 +35,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js",
+      "!src/components/Header/*.js",
       "!src/components/Provider.js",
       "!src/**/{index,stories}.js",
       "!src/utils/source.js"
@@ -45,11 +46,11 @@
   "homepage": "https://github.com/wheatandcat/leasot-report#readme",
   "devDependencies": {
     "@personare/react-storybook-decorator-github-corner": "^0.1.5",
-    "@storybook/addon-actions": "^3.2.11",
-    "@storybook/addon-knobs": "^3.2.10",
-    "@storybook/addon-options": "^3.2.10",
-    "@storybook/cli": "^3.2.10",
-    "@storybook/react": "^3.2.11",
+    "@storybook/addon-actions": "^3.2.16",
+    "@storybook/addon-knobs": "^3.2.16",
+    "@storybook/addon-options": "^3.2.16",
+    "@storybook/cli": "^3.2.16",
+    "@storybook/react": "^3.2.16",
     "@storybook/storybook-deployer": "^2.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",

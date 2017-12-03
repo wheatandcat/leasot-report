@@ -1,16 +1,17 @@
 // @flow
 import React from "react"
+import styled from "styled-components"
+import Divider from "material-ui/Divider"
 
-const style = {
-  marginTop: "30px",
-  marginBottom: "15px",
-  color: "#212121",
-  display: "flex",
-  justifyContent: "center"
-}
+const Root = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem;
+`
 
 export default () => (
-  <div style={style}>
+  <Root>
+    <Divider />
     Leasot&nbsp;Report&nbsp;generated&nbsp;by&nbsp;
     <a href='https://github.com/pgilad/leasot' target='_blank' rel='noopener noreferrer'>
       leasot
@@ -23,5 +24,5 @@ export default () => (
     >
       leasot-report
     </a>
-  </div>
+  </Root>
 )

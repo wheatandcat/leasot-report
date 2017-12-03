@@ -10,7 +10,7 @@ export default () => (
     <TableRow>
       <TableCell>Filename</TableCell>
       <TableCell>Line</TableCell>
-      <TableCell>Kind</TableCell>
+      <TableCell>{"　"}Kind</TableCell>
       <TableCell>Message</TableCell>
     </TableRow>
   </TableHead>

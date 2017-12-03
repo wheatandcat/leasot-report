@@ -6,13 +6,16 @@ import AppBar from "material-ui/AppBar"
 import Toolbar from "material-ui/Toolbar"
 import Typography from "material-ui/Typography"
 import Divider from "material-ui/Divider"
-import { Row, Header } from "./"
+import MuiPaper from "material-ui/Paper"
+import { Row, Header, Total } from "./"
 import type { Props as ItemProps } from "./Row"
 import Footer from "../Footer"
 
 type Props = {
   items: Array<ItemProps>
 }
+
+const Paper = styled(MuiPaper)`margin-left: auto !important;`
 
 const Contents = styled.div`
   display: flex;
@@ -31,6 +34,9 @@ export default ({ items }: Props) => (
         <Typography type='title' color='inherit'>
           Leasot Report
         </Typography>
+        <Paper>
+          <Total items={items} />
+        </Paper>
       </Toolbar>
     </AppBar>
 

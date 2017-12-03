@@ -21,7 +21,7 @@ import Header from "./components/Header"
 
 program
   .usage("[options] <file> <output>")
-  .version("1.0.0")
+  .version("1.1.0")
   .parse(process.argv)
 
 const outputDir = process.argv[3] || "leasot-reports"

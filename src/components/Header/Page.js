@@ -7,6 +7,6 @@ export default ({ children }: { children: Node }) => (
       <title>leasot report</title>
       <meta charSet='UTF-8' />
     </head>
-    <body>{children}</body>
+    <body style={{ backgroundColor: "#F4F3F4" }}>{children}</body>
   </html>
 )
